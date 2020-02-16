@@ -1,7 +1,6 @@
 #ifndef SUDOKU_H
 #define SUDOKU_H
 
-#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +11,10 @@
         exit(1);             \
     } while (0)
 
-typedef int sudoku[9][9];
+#define S_MAX 9
+#define S_SQU 3
+
+typedef int sudoku[S_MAX][S_MAX];
 
 int sudoku_read(sudoku s, char *puzzle);
 int sudoku_possible(sudoku s, int x, int y, int n);
